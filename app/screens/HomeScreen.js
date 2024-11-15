@@ -1,10 +1,21 @@
-import { StyleSheet, Text, View, SafeAreaView} from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
+import React from 'react';
+import tw from 'twrnc';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
-      <Text style={styles.text}>I am the home screen teehee</Text>
+    <SafeAreaView style={tw`bg-white h-full`}>
+      <View>
+      <Image 
+            style={{
+                width: 100,
+                height: 100,
+                resizeMode: "contain",
+            }}
+            source={require('@/app/Pictures/New_Apoio_Logo-removebg-preview-removebg-preview.png')}
+        />
+
+      </View>
     </SafeAreaView>
   );
 };
