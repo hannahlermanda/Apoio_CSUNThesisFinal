@@ -2,6 +2,7 @@ import { FlatList, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 import tw from 'twrnc';
 import { Icon } from '@rneui/themed';
+import { useNavigation } from '@react-navigation/native';
 
 //Options on the Screen
 const data = [
@@ -22,6 +23,9 @@ const data = [
 
 
 const NavOptions = () => {
+
+  const navigation = useNavigation();
+
   return (
     <FlatList 
         data={data}
@@ -29,7 +33,8 @@ const NavOptions = () => {
         horizontal
         renderItem={({ item }) => (
             <TouchableOpacity
-                style={tw`p-2 pl-5 pb-8 pt-4 bg-blue-100 m-2 w-32`}    //Padding:2, Padding Left: 5, Padding Bottom: 8, Padding Top: 4, Background Color: Light Blue, Margin:2, Width: 32
+                onPress={() => navigation.navigate(item.screen)}
+                style={tw`p-2 pl-5 pb-6 pt-1 bg-blue-100 m-2 w-32`}    //Padding:2, Padding Left: 5, Padding Bottom: 6, Padding Top: 1, Background Color: Light Blue, Margin:2, Width: 32
             >
                 <View>
                     <Image 
@@ -44,7 +49,7 @@ const NavOptions = () => {
                             {uri:item.image}
                         }
                     />
-                    <Text style={tw`mt-2 text-lg font-semibold`}>
+                    <Text style={tw`mt-2 text-lg font-semibold`}> 
                         {item.title}
                     </Text>
                     <Icon 
