@@ -1,18 +1,19 @@
 import { FlatList, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 import tw from 'twrnc';
+import { Icon } from '@rneui/themed';
 
 //Options on the Screen
 const data = [
     {
         id: "123",
-        title: "Get a ride",
+        title: "Request a Ride",
         image: "https://links.papareact.com/3pn",
         screen: "MapScreen",
     },
     {
         id: "456",
-        title: "See trusted contacts",
+        title: "My Trusted Contacts",
         image: "https://i.pinimg.com/originals/8a/9f/f0/8a9ff09d16b89f217d87c7ce8af64f25.png",
         screen: "TrustedContacts", //Demo?
     },
@@ -46,6 +47,12 @@ const NavOptions = () => {
                     <Text style={tw`mt-2 text-lg font-semibold`}>
                         {item.title}
                     </Text>
+                    <Icon 
+                        style={tw`p-2 bg-black rounded-full w-10 mt-4`} //Padding: 2, Background color: Black, Rounded Full, Width: 10, Margin top: 4
+                        type='antdesign'
+                        color='white'
+                        name='arrowright'
+                    />
                 </View>
             </TouchableOpacity>
         )}
