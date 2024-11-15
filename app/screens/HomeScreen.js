@@ -12,9 +12,8 @@ const HomeScreen = () => {
                 height: 100,
                 resizeMode: "contain",
             }}
-            source={require('@/app/Pictures/New_Apoio_Logo-removebg-preview-removebg-preview.png')}
+            source={require('@/app/Pictures/Apoio_Logo_2024.png')}
         />
-
       </View>
     </SafeAreaView>
   );
