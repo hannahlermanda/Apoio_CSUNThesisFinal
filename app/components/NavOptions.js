@@ -28,7 +28,7 @@ const NavOptions = () => {
         horizontal
         renderItem={({ item }) => (
             <TouchableOpacity
-                style={tw`p-2 pl-5 pb-8 pt-4 bg-blue-100 m-2 w-30`}    //Padding:2, Padding Left: 5, Padding Bottom: 8, Padding Top: 4, Background Color: Light Blue, Margin:2, Width: 30
+                style={tw`p-2 pl-5 pb-8 pt-4 bg-blue-100 m-2 w-32`}    //Padding:2, Padding Left: 5, Padding Bottom: 8, Padding Top: 4, Background Color: Light Blue, Margin:2, Width: 32
             >
                 <View>
                     <Image 
@@ -38,12 +38,12 @@ const NavOptions = () => {
                              resizeMode: "contain"
                             }
                         }
-                        //Where the images are from
+                        //Where the images are from (the data)
                         source={
                             {uri:item.image}
                         }
                     />
-                    <Text>
+                    <Text style={tw`mt-2 text-lg font-semibold`}>
                         {item.title}
                     </Text>
                 </View>
